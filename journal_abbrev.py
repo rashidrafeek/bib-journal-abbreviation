@@ -25,7 +25,7 @@ def abbreviate(line, journal_to_abbr):
 def main(journal_to_abbr):
     for line in sys.stdin:
         line_strip = line.strip()
-        if line_strip.startswith('journal'):
+        if line_strip.startswith('journal') or line_strip.startswith('Journal'):
             new_line = abbreviate(line, journal_to_abbr)
             print(new_line.rstrip())
         else:
